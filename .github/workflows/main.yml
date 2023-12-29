@@ -29,12 +29,6 @@ jobs:
         uses: mamba-org/setup-micromamba@v1
         with:
           environment-file: environment-dev.yml
-          environment-name: xeus-lua
-
-      - name: Install cxx compiler
-        shell: bash -l {0}
-        run: |
-          $HOME/micromamba-bin/micromamba install cxx-compiler -c conda-forge -y
 
       - name: Install luajit
         shell: bash -l {0}
